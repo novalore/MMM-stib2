@@ -125,7 +125,7 @@ Module.register("MMM-stib2", {
 
   getDom: function() {
     var wrapper = document.createElement("div");
-    wrapper.classList.add("stib-table", "small");
+    wrapper.classList.add("stib-table", "medium");
 
     if (Object.keys(this.stibData).length > 1) {
       return this.getTable();
@@ -142,7 +142,7 @@ Module.register("MMM-stib2", {
     const currentTime = new Date();
 
     const table = document.createElement("div");
-    table.classList.add("stib-table", "small");
+    table.classList.add("stib-table", "medium");
 
     let rowIndex = 1;
     const seen = new Set();
@@ -153,7 +153,7 @@ Module.register("MMM-stib2", {
       let stop = this.stibData[stopName];
       let stopSpan = document.createElement("span");
       stopSpan.innerHTML = stopName;
-      stopSpan.classList.add("stib-stopname", "dimmed");
+      stopSpan.classList.add("stib-stopname", "bright", "small");
       stopSpan.style.gridRowStart = rowIndex;
       table.appendChild(stopSpan);
 
@@ -187,13 +187,13 @@ Module.register("MMM-stib2", {
         for (let route in stop[line]) {
           const routeSpan = document.createElement("span");
           routeSpan.innerHTML = route.toLowerCase();
-          routeSpan.classList.add("stib-routename", lineClass);
+          routeSpan.classList.add("stib-routename", "bright", lineClass);
           routeSpan.style.gridRow = rowIndex + " / span 1";
           table.appendChild(routeSpan);
 
           let div = this.getTimeDiv(stop[line][route][0], currentTime);
           div.style.gridRow = rowIndex + " / span 1";
-          div.classList.add(lineClass);
+          div.classList.add(lineClass, "bright");
           table.appendChild(div);
 
           div = this.getTimeDiv(stop[line][route][1], currentTime);
