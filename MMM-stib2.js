@@ -153,7 +153,7 @@ Module.register("MMM-stib2", {
       let stop = this.stibData[stopName];
       let stopSpan = document.createElement("span");
       stopSpan.innerHTML = stopName;
-      stopSpan.classList.add("stib-stopname", "bright", "small");
+      stopSpan.classList.add("stib-stopname", "bright");
       stopSpan.style.gridRowStart = rowIndex;
       table.appendChild(stopSpan);
 
