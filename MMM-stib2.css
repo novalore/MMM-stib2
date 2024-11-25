@@ -3,11 +3,16 @@
  * MMM-stib2
  *
  * Benoît Dardenne
+ * Lorenzo Novaro
  * MIT Licensed.
  *
- * Custom here your css module
+ * Copy classes to your custom.css file to customize the aspect of this module
  *
  */
+
+div.MMM-stib2 div.module-content {
+  padding-top: 2em;
+}
 
 div.stib-table {
   text-transform: uppercase;
